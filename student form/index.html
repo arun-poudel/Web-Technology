@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <style>
+        /* Basic styling for the form */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            background-color: #f2f2f2;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        input[type="text"], input[type="email"], textarea, select {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        input[type="submit"], input[type="reset"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<form action="/submit" method="post">
+    <h2>Student Form</h2>
+    <label for="firstName">First Name:</label><br>
+    <input type="text" id="firstName" name="firstName" required><br>
+    <label for="middleName">Middle Name:</label><br>
+    <input type="text" id="middleName" name="middleName"><br>
+    <label for="lastName">Last Name:</label><br>
+    <input type="text" id="lastName" name="lastName" required><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+    <label>Gender:</label><br>
+    <input type="radio" id="male" name="gender" value="male" required>
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br>
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">Other</label><br><br>
+    <label for="description">Short Description:</label><br>
+    <textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>
+    <label for="semester">Semester:</label><br>
+    <select id="semester" name="semester" required>
+        <option value="">Select Semester</option>
+        <option value="1">1st Semester</option>
+        <option value="2">2nd Semester</option>
+        <option value="3">3rd Semester</option>
+        <option value="4">4th Semester</option>
+        <option value="5">5th Semester</option>
+        <option value="6">6th Semester</option>
+        <option value="7">7th Semester</option>
+        <option value="8">8th Semester</option>
+    </select><br><br>
+    <label for="skills">Skills:</label><br>
+    <select id="skills" name="skills[]" multiple size="3" required>
+        <option value="communication" selected>Communication</option>
+        <option value="teamwork">Teamwork</option>
+        <option value="problem-solving">Problem Solving</option>
+        <option value="leadership">Leadership</option>
+        <option value="time-management">Time Management</option>
+    </select>
+    <br><br>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+</form>
+
+</body>
+</html>
