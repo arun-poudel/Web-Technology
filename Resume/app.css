@@ -30,6 +30,7 @@ body {
   align-items: flex-start;
   background: #fff;
   border-radius: 16px;
+  padding: 16px;
 }
 
 /* Styles for the left content section */
@@ -193,7 +194,7 @@ h3 {
   width: 650px;
   height: 1471px;
   flex-shrink: 0;
-  background: #e5ebf5;
+  /* background: #e5ebf5; */
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
 }
